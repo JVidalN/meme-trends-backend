@@ -1,0 +1,20 @@
+@hostname = http://localhost
+@port = 3003
+@host = {{hostname}}:{{port}}/api
+
+# @name CreateMemeTrend
+POST {{host}}/memeTrend
+content-type: application/json
+
+{
+  "name":"Pensativo",
+  "createdDate":"11/08/2020",
+  "trendDate":"11/08/2020",
+  "vote":"1",
+  "meme":"https://lh3.googleusercontent.com/proxy/m7aEMykr8u-05gSCf5RJSHTuiw1I1xxchiH6iXoa1vn_Z2mswxq1QhU5HTDoLBVWDb-wdhypTbrioSS2k8zp5gV9vQG4lDFMHF4iLbTnEDWusmBjLLiAZRuvdTadSOPR5XzTkiSenzcu7FPFRkmSJDpJFtJzFFgGoMqAYHKWtdfpsGQR6lza8Ehyd3IZA7duV4wb5GYxpUrbfVdD2cZ2lPzRjoA0uF0cs6gkISgBLUd3hX9qtA"
+}
+
+###
+
+# @name ListMemeTrends
+GET {{host}}/memeTrend
