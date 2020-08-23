@@ -4,6 +4,8 @@ mongoose.Promise = global.Promise;
 const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/db_meme';
 module.exports = mongoose.connect(url, {
   useMongoClient: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório.";
