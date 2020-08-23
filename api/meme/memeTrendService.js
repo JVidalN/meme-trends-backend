@@ -23,14 +23,4 @@ function parseErrors(nodeRestfulErrors) {
   return errors;
 }
 
-memeTrend.route('count', function (req, res, next) {
-  memeTrend.count(function (error, value) {
-    if (error) {
-      res.status(500).json({ errors: [error] });
-    } else {
-      res.json({ value });
-    }
-  });
-});
-
 module.exports = memeTrend;
